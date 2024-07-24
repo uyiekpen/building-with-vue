@@ -5,3 +5,11 @@
 :root {
   font-family: Poppins;
 }
+
+.sales-stats {
+  @apply grid grid-cols-1 md:grid-cols-3  md:gap-x-3;
+}
+
+.chart-stats {
+  @apply grid grid-cols-1 md:grid-cols-2   md:gap-x-3;
+}
