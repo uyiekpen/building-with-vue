@@ -23,7 +23,8 @@
             :key="cellIndex"
             class="py-2 px-4 border-b border-gray-200 text-sm text-gray-700"
           >
-            {{ cell }}
+            <component v-if="cell.isComponent" :is="cell.component" v-bind="cell.props" />
+            <span v-else v-html="cell.content"></span>
           </td>
         </tr>
       </tbody>
@@ -34,14 +35,22 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 
+interface TableCell {
+  isComponent: boolean;
+  component?: any;
+  props?: object;
+  content?: string;
+}
+
 defineProps({
   headers: {
     type: Array as () => string[],
     required: true
   },
   rows: {
-    type: Array as () => (string | number)[][],
+    type: Array as () => TableCell[][],
     required: true
   }
 });
 </script>
+5
