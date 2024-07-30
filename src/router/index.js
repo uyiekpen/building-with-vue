@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import SignUp from "../auth/SignUp.vue";
 import SignIn from "../auth/SignIn.vue";
 import Layouts from "../components/layouts/Nav.vue";
 import DashboardHome from "../views/Dashboard/index.vue";
 import ProductList from "../views/productList/index.vue";
 
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     component: SignUp,

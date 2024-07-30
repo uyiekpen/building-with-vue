@@ -25,7 +25,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { defineProps, ref } from 'vue';
 import logo from "../../assets/logo-light-full.png";
 
-const props = defineProps<{ isOpen: boolean }>();
+defineProps<{ isOpen: boolean }>();
 
 const menuItems = ref([
     { name: 'Dashboard', path: '/dashboard', icon: faHome },
