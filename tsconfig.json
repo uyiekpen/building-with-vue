@@ -29,7 +29,9 @@
 
     "baseUrl": "./",
     "paths": {
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@/*": ["src/*"]
+
     }
   },
   "include": [
@@ -37,7 +39,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/lib/appwrite.ts",
-    "src/router/index.js"
+    "src/router/index.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
