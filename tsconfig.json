@@ -36,10 +36,11 @@
   },
   "include": [
     "src/**/*.ts",
+    "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/lib/appwrite.ts",
-    "src/router/index.ts"
+    "src/router/index.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

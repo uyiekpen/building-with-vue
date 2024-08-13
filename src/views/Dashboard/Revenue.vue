@@ -4,7 +4,7 @@
       <div
         v-for="stat in salesStatistics"
         :key="stat.id"
-        class="p-4 w-full bg-white rounded-md space-y-3 border"
+        class="p-4 w-[280px] md:w-full bg-white rounded-md space-y-3 border"
       >
         <p class="capitalize font-bold text-[16px] leading-5">
           {{ stat.title }}
@@ -12,7 +12,7 @@
         <div class="flex items-center justify-between">
           <div>
             <h5 class="text-2xl font-semibold">{{ stat.amount }}</h5>
-            <span class="text-gray-400 font-light">{{stat.date}}</span>
+            <span class="text-gray-400 font-light">{{ stat.date }}</span>
           </div>
           <p
             :class="[
@@ -20,9 +20,7 @@
               'flex items-center justify-between rounded-full py-1 px-3 font-semibold text-[12px] leading-4'
             ]"
           >
-            <!-- <BsPlus /> -->
             {{ stat.percentage }}
-            <!-- <IoMdTrendingUp /> -->
           </p>
         </div>
       </div>
@@ -31,9 +29,6 @@
 </template>
 
 <script setup lang="ts">
-// import { BsPlus } from 'vue-icons/bs';
-// import { IoMdTrendingUp } from 'vue-icons/io';
-
 const salesStatistics = [
   {
     id: 0,
@@ -61,5 +56,3 @@ const salesStatistics = [
   },
 ] as const;
 </script>
-
-<style scoped></style>

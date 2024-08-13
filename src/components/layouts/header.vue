@@ -5,11 +5,10 @@
     >
       <div className="flex items-center gap-2 sm:gap-4 justify-center ">
         <button @click="toggleSidebar" class="lg:hidden ">
-          <font-awesome-icon :icon="faBars"  />
+          <font-awesome-icon :icon="faBars" />
         </button>
-        <div class=" w-[70px] flex justify-between">
-          <font-awesome-icon :icon="faBars" size="xl" />
-
+        <div class=" w-[70px] flex justify-between items-center lg:hidden">
+          <img :src="logo" class="h-12 w-auto" />
           <font-awesome-icon :icon="faSearch" size="xl" />
         </div>
       </div>
@@ -35,6 +34,8 @@
 </template>
 
 <script setup lang="ts">
+import logo from '../../assets/logo.png';
+
 import usIcon from "../../assets/us.png"
 import adnin from "../../assets/1.jpg"
 import { defineEmits } from 'vue';

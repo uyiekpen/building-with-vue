@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="chart-wrap w-full max-w-2xl bg-white p-4 rounded-lg  border h-[400px]">
+    <div class="chart-wrap w-full max-w-2xl bg-white p-4 rounded-lg border h-[400px]">
       <apexchart
         type="donut"
-        :width="380"
+        :width="chartWidth"
         :options="chartOptions"
         :series="series"
       ></apexchart>
@@ -12,8 +12,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import VueApexCharts from 'vue3-apexcharts';
+
+// Determine the chart width based on the window size
+const chartWidth = computed(() => {
+  if (window.innerWidth < 480) {
+    return 200;
+  }
+  return 380;
+});
 
 const series = ref([44, 55, 13, 33]);
 
@@ -56,3 +64,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.chart-wrap {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .chart-wrap {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+}
+</style>
