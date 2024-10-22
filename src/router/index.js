@@ -4,6 +4,7 @@ import SignIn from "../auth/SignIn.vue";
 import Layouts from "../components/layouts/Nav.vue";
 import DashboardHome from "../views/Dashboard/index.vue";
 import ProductList from "../views/productList/index.vue";
+import ProductEdit from "../views/EditProduct/index.vue"
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
         path: "productlist",
         name: "ProductList",
         component: ProductList,
+      },
+      {
+        path: "edit-product",
+        name: "ProductEdit",
+        component: ProductEdit,
       },
     ],
   },

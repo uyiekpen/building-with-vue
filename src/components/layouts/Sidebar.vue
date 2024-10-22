@@ -33,8 +33,8 @@ defineProps<{ isOpen: boolean }>();
 
 const menuItems = ref([
   { name: 'Dashboard', path: '/dashboard', icon: faHome },
-  { name: 'Product List', path: '/productlist', icon: faUsers },
-  { name: 'Product Edit', path: '/settings', icon: faCog },
+  { name: 'ProductList', path: '/dashboard/productlist', icon: faUsers },
+  { name: 'ProductEdit', path: '/edit-product', icon: faCog },
   { name: 'New Product', path: '/settings', icon: faCog },
   { name: 'Order list', path: '/settings', icon: faCog },
   { name: 'Order details', path: '/settings', icon: faCog },
